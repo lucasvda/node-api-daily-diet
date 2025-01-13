@@ -8,8 +8,8 @@ export async function up(knex: Knex): Promise<void> {
             table.uuid("user_id").notNullable(),
             table.text("meal_name").notNullable(),
             table.text("description"),
-            table.timestamp("date_and_time"),
-            table.enum("on_diet", ["Yes","No"]),
+            table.timestamp("date_and_time").notNullable(),
+            table.enum("on_diet", ["Yes","No"]).notNullable(),
             table.timestamp("created_at").defaultTo(knex.fn.now()).notNullable(),
             table
                 .foreign("user_id")
