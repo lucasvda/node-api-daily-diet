@@ -150,7 +150,7 @@ export async function mealsRoutes(app: FastifyInstance) {
                 on_diet
             })
 
-        return reply.status(200).send({
+        return reply.status(204).send({
             sucess: "Record updated succesfully."
         })
     })
@@ -172,7 +172,7 @@ export async function mealsRoutes(app: FastifyInstance) {
             })
             .delete()
 
-        return reply.status(200).send({
+        return reply.status(204).send({
             sucess: "Record deleted succesfully."
         })
     })
